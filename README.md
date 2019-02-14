@@ -1,7 +1,7 @@
 # loan_management
 ### A micro credit loan management software
 
-[![License](https://poser.pugx.org/phpunit/phpunit/license)](https://github.com/ojkalam/online-blog-and-exam)
+[![License](https://poser.pugx.org/pugx/badge-poser/license)](https://github.com/ojkalam/loan-management)
 
 ## Installation 
  * Import ```brac_loan.sql``` database file.
