@@ -1,0 +1,27 @@
+/*All Custom CSS styles*/
+
+/*While @font-face is excellent for fonts that are hosted on our own servers, there may be situations where a hosted font solution is better. Google Fonts offers this as a way to use their fonts.*/
+/*
+Using Custom fonts
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('webfont.eot');  IE9 Compat Modes 
+  src: url('webfont.eot?#iefix') format('embedded-opentype'),  IE6-IE8 
+       url('webfont.woff2') format('woff2'),   Super Modern Browsers 
+       url('webfont.woff') format('woff'),   Pretty Modern Browsers
+       url('webfont.ttf')  format('truetype'),    Safari, Android, iOS 
+       url('webfont.svg#svgFontName') format('svg');   Legacy iOS 
+}
+*/
+
+/*font-family: 'Rajdhani', sans-serif;*/
+/*@import url('https://fonts.googleapis.com/css?family=Rajdhani');
+h2{
+	font-family: Rajdhani;
+}*/
+
+/*h3{color:green; !important}*/
+
+.menu-title{
+	font-size: 17px !important;
+}
