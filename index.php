@@ -132,7 +132,7 @@
 
                          $giveNotification = date('d-m-Y',strtotime('+3 months',strtotime($result['next_date'])));
 
-                           if ($curren_date > $giveNotification) {
+                         if (strtotime($curren_date) > strtotime($giveNotification)) {
 
                    ?> 
 
