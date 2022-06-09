@@ -52,8 +52,9 @@
 
 
           <?php 
-
+           $name ="" ; $b_id = "";
             if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['search'])) {
+             
                 $nid = $_POST['key'];
                 $br = $emp->findBorrower($nid);
                 if ($br) {
@@ -66,7 +67,7 @@
               }            
            ?>
 
-          <form action="" method="POST">
+          <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
                 <div class="form-group row">
               <label for="inputBorrowerFirstName" class="text-right col-2 font-weight-bold col-form-label">Search brrower: </label>                      
               <div class="col-sm-6">
@@ -79,8 +80,25 @@
 
           </form>  
 
-          <form action="" method="post" enctype="multipart/form-data" name="myform" id="myform" />
+          <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" enctype="multipart/form-data" name="myform" id="myform" >
             </div>
+<!--Added Borrower Name-->
+            <div class="form-group row">
+              <label for="borrower_name" class="text-right col-2 font-weight-bold col-form-label">Borrower Name</label>                      
+              <div class="col-sm-9">
+                  <input type="text"  name="borrower_name" class="form-control" value="<?php echo $name; ?>" readonly>
+              </div>
+            </div>
+
+            <!--Added Borrower ID-->
+            <div class="form-group row">
+              <label for="borrower_id" class="text-right col-2 font-weight-bold col-form-label">Borrower ID</label>                      
+              <div class="col-sm-9">
+                  <input type="text"  name="b_id" class="form-control" value="<?php echo $b_id; ?>" readonly>
+              </div>
+            </div>
+
+           
 
             <div class="form-group row">
               <label for="loanamount" class="text-right col-2 font-weight-bold col-form-label">Expected Loan amount</label>                      
@@ -106,7 +124,7 @@
              <div class="form-group row">
                 <label  class="text-right col-2 font-weight-bold col-form-label">Total amount including interest</label>                      
                  <div class="col-sm-9">
-                  <input type="text"  name="total_amount" class="form-control"readonly required>
+                  <input type="text"  name="total_amount" class="form-control" readonly required>
               </div>
             </div> 
 
